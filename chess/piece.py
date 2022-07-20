@@ -47,3 +47,11 @@ class Piece:
                 win.blit(WHITE_QUEEN, (self.x - 40, self.y - 30))
             if self.type == PAWN:
                 win.blit(WHITE_PAWN, (self.x - 35, self.y - 25))
+
+    def move(self, row, col):
+        self.row = row
+        self.col = col
+        self.calc_pos()
+
+    def __repr__(self):
+        return str(self.color)
