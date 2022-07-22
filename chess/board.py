@@ -13,3 +13,11 @@ class Board:
         self.roker_white = True
         self.roker_black = True
         self.create_board()
+
+    def draw_squares(self, win):
+        win.fill(WHITE)
+        for row in range(ROWS):
+            for col in range(row % 2, COLS, 2):
+                pygame.draw.rect(win, GREEN, (row*SQUARE_SIZE, col *SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+    
+    
