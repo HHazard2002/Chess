@@ -20,4 +20,14 @@ class Board:
             for col in range(row % 2, COLS, 2):
                 pygame.draw.rect(win, GREEN, (row*SQUARE_SIZE, col *SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
     
-    
+    def evaluate(self):
+        evaluation = 0
+        black_pieces = self.get_all_pieces(BLACK)
+        white_pieces = self.get_all_pieces(WHITE)
+        
+        for piece in black_pieces:
+            evaluation += piece.value + EVAL[piece.type][7 - piece.row][7 - piece.col]
+        for piece in white_pieces:
+            evaluation -= piece.value + EVAL[piece.type][piece.row][piece.col]    
+            
+        return evaluation
