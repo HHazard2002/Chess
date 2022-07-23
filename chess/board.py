@@ -53,3 +53,30 @@ class Board:
         board.move(piece, move[0], move[1])
 
         return board
+
+    def is_check(self, move, piece):
+
+        king_position = (-1, -1)
+        possible_moves = {}
+        is_check = False
+        removed = False
+        piece_row = piece.row
+        piece_col = piece.col
+        index_row = move[0]
+        index_col = move[1]
+        color = piece.color
+        moves = {}
+        moves[(index_row, index_col)] = piece
+        if color == BLACK:
+            not_color = WHITE
+        else:
+            not_color = BLACK
+       
+        if self.board[index_row][index_col] != 0:
+            removed_piece = self.get_piece(index_row, index_col)
+            removed = True
+            self.remove(removed_piece)
+
+        self.move(piece, index_row, index_col)
+
+        
