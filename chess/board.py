@@ -39,3 +39,6 @@ class Board:
                 if piece != 0 and piece.color == color and piece.row <= 7:
                     pieces.append(piece)
         return pieces
+
+    def get_piece(self, row, col):
+        return self.board[row][col]
