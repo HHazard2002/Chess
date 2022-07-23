@@ -95,3 +95,17 @@ class Board:
             self.eaten_pieces.pop()
 
         return is_check
+
+    def get_legal_moves(self, piece):
+
+        all_legal_moves = {}
+        illegal_moves = []
+        all_legal_moves = self.get_valid_moves(piece)
+        for move in all_legal_moves:
+            if self.is_check(move, all_legal_moves[move]):
+                illegal_moves.append(move)
+
+        for move in illegal_moves:
+            all_legal_moves.pop(move)
+
+        return all_legal_moves
