@@ -79,4 +79,19 @@ class Board:
 
         self.move(piece, index_row, index_col)
 
+        king_position = self.get_king(color)
         
+        if king_position != (-1, -1):
+            for opposite_piece in self.get_all_pieces(not_color):
+                possible_moves.update(self.get_valid_moves(opposite_piece))
+                if king_position in possible_moves.keys():
+                    is_check = True
+                    break
+
+        self.move(piece, piece_row, piece_col)
+        if removed:
+            self.move(removed_piece, index_row, index_col)
+            self.number_eaten_pieces -= 1
+            self.eaten_pieces.pop()
+
+        return is_check
