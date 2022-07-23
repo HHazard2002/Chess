@@ -42,3 +42,9 @@ class Board:
 
     def get_piece(self, row, col):
         return self.board[row][col]
+    
+    def get_king(self, color):
+        for row in self.board:
+            for piece in row:
+                if piece != 0 and piece.type == KING and piece.color == color:
+                    return (piece.row, piece.col)
