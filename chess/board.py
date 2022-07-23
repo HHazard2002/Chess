@@ -31,3 +31,11 @@ class Board:
             evaluation -= piece.value + EVAL[piece.type][piece.row][piece.col]    
             
         return evaluation
+
+    def get_all_pieces(self, color):
+        pieces = []
+        for row in self.board:
+            for piece in row:
+                if piece != 0 and piece.color == color and piece.row <= 7:
+                    pieces.append(piece)
+        return pieces
