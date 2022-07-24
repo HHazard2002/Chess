@@ -118,3 +118,7 @@ class Board:
             if len(moves) != 0:
                 return False
         return True
+
+    def move(self, piece, row, col):
+        self.board[piece.row][piece.col], self.board[row][col] = self.board[row][col], self.board[piece.row][piece.col]
+        piece.move(row, col)
