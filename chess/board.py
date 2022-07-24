@@ -150,4 +150,8 @@ class Board:
                     if (col == 2 or col == 5):
                         self.board[row].append(Piece(row, col, WHITE, BISHOP, 30))
                     if (col == 3):
-                        
+                        self.board[row].append(Piece(row, col, WHITE, QUEEN, 90))
+                    if (col == 4):
+                        self.board[row].append(Piece(row, col, WHITE, KING, 900))
+                else:
+                    self.board[row].append(0)
