@@ -139,3 +139,15 @@ class Board:
                     if (col == 4):
                         self.board[row].append(Piece(row, col, BLACK, KING, 900))
                 elif row == 1:
+                  self.board[row].append(Piece(row, col, BLACK, PAWN, 10))
+                elif row == 6:
+                    self.board[row].append(Piece(row, col, WHITE, PAWN, 10))
+                elif row == 7:
+                    if (col == 0 or col == 7):
+                        self.board[row].append(Piece(row, col, WHITE, ROOK, 50))
+                    if (col == 1 or col == 6):
+                        self.board[row].append(Piece(row, col, WHITE, KNIGHT, 30))
+                    if (col == 2 or col == 5):
+                        self.board[row].append(Piece(row, col, WHITE, BISHOP, 30))
+                    if (col == 3):
+                        
