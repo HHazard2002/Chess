@@ -109,3 +109,12 @@ class Board:
             all_legal_moves.pop(move)
 
         return all_legal_moves
+
+    def is_checkmate(self, color):
+        moves = {}
+        pieces = self.get_all_pieces(color)
+        for piece in pieces:
+            moves.update(self.get_legal_moves(piece))
+            if len(moves) != 0:
+                return False
+        return True
