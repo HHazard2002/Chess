@@ -122,3 +122,20 @@ class Board:
     def move(self, piece, row, col):
         self.board[piece.row][piece.col], self.board[row][col] = self.board[row][col], self.board[piece.row][piece.col]
         piece.move(row, col)
+
+    def create_board(self):
+        for row in range(ROWS + 1):
+            self.board.append([])
+            for col in range (COLS):
+                if row == 0:
+                    if (col == 0 or col == 7):
+                        self.board[row].append(Piece(row, col, BLACK, ROOK, 50))
+                    if (col == 1 or col == 6):
+                        self.board[row].append(Piece(row, col, BLACK, KNIGHT, 30))
+                    if (col == 2 or col == 5):
+                        self.board[row].append(Piece(row, col, BLACK, BISHOP, 30))
+                    if (col == 3):
+                        self.board[row].append(Piece(row, col, BLACK, QUEEN, 90))
+                    if (col == 4):
+                        self.board[row].append(Piece(row, col, BLACK, KING, 900))
+                elif row == 1:
