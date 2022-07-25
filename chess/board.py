@@ -183,3 +183,13 @@ class Board:
         moves = {}
         left = piece.col - 1
         right = piece.col + 1
+
+        col = piece.col
+        row = piece.row
+        color = piece.color
+        type = piece.type
+        direction = 0
+        if piece.color == BLACK:
+            direction = 1
+        else:
+            direction -1
