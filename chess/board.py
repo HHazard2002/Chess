@@ -178,3 +178,8 @@ class Board:
                         self.red_left -= 1
                     else:
                         self.white_left -= 1
+    
+    def get_valid_moves(self, piece):
+        moves = {}
+        left = piece.col - 1
+        right = piece.col + 1
