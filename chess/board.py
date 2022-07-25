@@ -193,3 +193,13 @@ class Board:
             direction = 1
         else:
             direction -1
+
+        if type == PAWN:
+            moves.update(self.pawn_moves(col, row, color))
+        if type == KING:
+            moves.update(self.king_moves(col, row, color))
+        if type == BISHOP or type == QUEEN:
+            moves.update(self.bishop_up_left(col, row, col, row, color))
+            moves.update(self.bishop_up_right(col, row, col, row, color))
+            moves.update(self.bishop_down_left(col, row, col, row, color))
+            moves.update(self.bishop_down_right(col, row, col, row, color))
