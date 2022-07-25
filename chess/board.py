@@ -203,3 +203,12 @@ class Board:
             moves.update(self.bishop_up_right(col, row, col, row, color))
             moves.update(self.bishop_down_left(col, row, col, row, color))
             moves.update(self.bishop_down_right(col, row, col, row, color))
+        if type == ROOK or type == QUEEN:
+            moves.update(self.rook_up(col, row, col, row, color))
+            moves.update(self.rook_down(col, row, col, row, color))
+            moves.update(self.rook_left(col, row, col, row, color))
+            moves.update(self.rook_right(col, row, col, row, color))
+        if type == KNIGHT:
+            moves.update(self.knight_moves(col, row, color))   
+    
+        return moves
