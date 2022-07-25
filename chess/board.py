@@ -169,3 +169,12 @@ class Board:
         self.move(piece, 8, self.number_eaten_pieces)
         self.number_eaten_pieces += 1
         self.eaten_pieces.append(piece)
+        
+        if 0 == 1:
+            for piece in piece:
+                self.board[piece.row][piece.col] = 0
+                if piece != 0:
+                    if piece.color == WHITE:
+                        self.red_left -= 1
+                    else:
+                        self.white_left -= 1
