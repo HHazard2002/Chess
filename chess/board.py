@@ -163,3 +163,9 @@ class Board:
                 piece = self.board[row][col]
                 if piece != 0:
                     piece.draw(win)
+
+    def remove(self, piece):
+        self.board[8].append(0)
+        self.move(piece, 8, self.number_eaten_pieces)
+        self.number_eaten_pieces += 1
+        self.eaten_pieces.append(piece)
