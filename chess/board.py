@@ -218,3 +218,7 @@ class Board:
             new_row = row - 1
         else:
             new_row = row + 1
+        moves = {}
+        current = self.board[row][col]
+        if 0 <= new_row <= 7:
+        
