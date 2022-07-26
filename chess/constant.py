@@ -53,3 +53,5 @@ EVAL[KNIGHT] = KNIGHT_EVAL
 EVAL[PAWN] = PAWN_EVAL
 EVAL[BISHOP] = BISHOP_EVAL
 EVAL[ROOK] = ROOK_EVAL
+
+CROWN = pygame.transform.scale(pygame.image.load('checkers/crown.png'), (44, 25))
