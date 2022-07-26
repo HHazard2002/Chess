@@ -221,4 +221,10 @@ class Board:
         moves = {}
         current = self.board[row][col]
         if 0 <= new_row <= 7:
-        
+    
+            if self.board[new_row][col] == 0:
+                moves[(new_row, col)] = current
+                if row == 6 and color == WHITE and self.board[row - 2][col] == 0:
+                    moves[(row - 2, col)] = current
+                elif row == 1 and color == BLACK and self.board[row + 2][col] == 0:
+                    moves[(row + 2, col)] = current    
