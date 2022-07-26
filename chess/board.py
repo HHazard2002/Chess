@@ -1,6 +1,6 @@
 import pygame
 from minimax.algorithm import simulate_move
-from .constants import *
+from .constant import *
 from .piece import Piece
 
 class Board:
