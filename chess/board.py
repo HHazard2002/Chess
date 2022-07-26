@@ -212,3 +212,9 @@ class Board:
             moves.update(self.knight_moves(col, row, color))   
     
         return moves
+
+    def pawn_moves(self, col, row, color):
+        if color == WHITE:
+            new_row = row - 1
+        else:
+            new_row = row + 1
