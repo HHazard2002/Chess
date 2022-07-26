@@ -242,3 +242,5 @@ class Board:
                 elif 0 <= col -1 and self.en_passant.col == col - 1:
                     moves[(new_row, col-1)] = current
                     self.eaten_en_passant = self.en_passant
+
+        return moves
