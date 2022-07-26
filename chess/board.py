@@ -234,4 +234,11 @@ class Board:
                  
             if 0 <= col - 1 and self.board[new_row][col - 1] != 0 and self.board[new_row][col - 1].color != color:
                 moves[(new_row, col-1)] = current
-  
+            
+            if self.en_passant and self.en_passant.row == row:
+                if 7 >= col + 1 and self.en_passant.col == col + 1:
+                    moves[(new_row, col+1)] = current
+                    self.eaten_en_passant = self.en_passant
+                elif 0 <= col -1 and self.en_passant.col == col - 1:
+                    moves[(new_row, col-1)] = current
+                    self.eaten_en_passant = self.en_passant
