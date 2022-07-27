@@ -273,3 +273,10 @@ class Board:
                 moves[(0,2)] = current
             if self.board[0][5] == 0 and self.board[0][6] == 0:
                 moves[(0,6)] = current
+        elif color == WHITE and self.roker_white:
+            if self.board[7][1] == 0 and self.board[7][2] == 0 and self.board[7][3] == 0:
+                moves[(7,2)] = current
+            if self.board[7][5] == 0 and self.board[7][6] == 0:
+                moves[(7,6)] = current
+            
+        return moves
