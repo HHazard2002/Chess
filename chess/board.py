@@ -244,3 +244,7 @@ class Board:
                     self.eaten_en_passant = self.en_passant
 
         return moves
+
+    def king_moves(self, col, row, color):
+        moves = {}
+        current = self.board[row][col]
