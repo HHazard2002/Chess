@@ -268,3 +268,8 @@ class Board:
         if 7 >= col + 1:
             if self.board[row][col + 1] == 0 or self.board[row][col + 1].color != color:
                 moves[(row, col + 1)] = current
+        if color == BLACK and self.roker_black:
+            if self.board[0][1] == 0 and self.board[0][2] == 0 and self.board[0][3] == 0:
+                moves[(0,2)] = current
+            if self.board[0][5] == 0 and self.board[0][6] == 0:
+                moves[(0,6)] = current
