@@ -292,3 +292,15 @@ class Board:
                 moves[(row - 1, col - 1)] = current
 
         return moves
+
+    def bishop_up_right(self, current_col, current_row, col, row, color):
+        moves = {}
+        current = self.board[current_row][current_col]
+        if 7 >= col + 1 and 0 <= row - 1:
+            if self.board[row - 1][col + 1] == 0:
+                moves[(row - 1, col + 1)] = current
+                moves.update(self.bishop_up_right(current_col, current_row, col + 1, row - 1, color))
+            elif self.board[row - 1][col + 1].color != color:
+                moves[(row - 1, col + 1)] = current
+
+        return moves
