@@ -340,4 +340,13 @@ class Board:
                 moves[(row, col - 1)] = current
         return moves
 
-    
+    def rook_down(self, current_col, current_row, col, row, color):
+        moves = {}
+        current = self.board[current_row][current_col]
+        if 7 >= col + 1:
+            if self.board[row][col + 1] == 0:
+                moves[(row, col + 1)] = current
+                moves.update(self.rook_down(current_col, current_row, col + 1, row, color))
+            elif self.board[row][col + 1].color != color:
+                moves[(row, col + 1)] = current
+        return moves
