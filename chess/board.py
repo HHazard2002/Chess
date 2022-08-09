@@ -361,3 +361,14 @@ class Board:
             elif self.board[row + 1][col].color != color:
                 moves[(row + 1, col)] = current
         return moves
+
+    def rook_left(self, current_col, current_row, col, row, color):
+        moves = {}
+        current = self.board[current_row][current_col]
+        if 0 <= row - 1:
+            if self.board[row - 1][col] == 0:
+                moves[(row - 1, col)] = current
+                moves.update(self.rook_left(current_col, current_row, col, row - 1, color))
+            elif self.board[row - 1][col].color != color:
+                moves[(row - 1, col)] = current
+        return moves
