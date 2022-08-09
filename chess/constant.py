@@ -57,3 +57,4 @@ EVAL[ROOK] = ROOK_EVAL
 CROWN = pygame.transform.scale(pygame.image.load('checkers/crown.png'), (44, 25))
 
 BLACK_KING = pygame.transform.scale(pygame.image.load('checkers/image/black_king.png'), (80, 60))
+BLACK_QUEEN = pygame.transform.scale(pygame.image.load('checkers/image/black_queen.png'), (80, 60))
