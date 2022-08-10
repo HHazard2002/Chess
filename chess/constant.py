@@ -62,3 +62,5 @@ BLACK_ROOK = pygame.transform.scale(pygame.image.load('checkers/image/black_rook
 BLACK_BISHOP = pygame.transform.scale(pygame.image.load('checkers/image/black_bishop.png'), (80, 60))
 BLACK_KNIGHT = pygame.transform.scale(pygame.image.load('checkers/image/black_knight.png'), (80, 60))
 BLACK_PAWN = pygame.transform.scale(pygame.image.load('checkers/image/black_pawn.png'), (70, 60))
+
+WHITE_KING = pygame.transform.scale(pygame.image.load('checkers/image/white_king.png'), (80, 60))
