@@ -27,3 +27,13 @@ class Game:
         elif value > 800:
             return WHITE
         return None
+
+  def winner(self):
+        color = self.turn
+        if self.board.is_checkmate(color):
+            if color == BLACK:
+                return WHITE
+            elif color == WHITE:
+                return BLACK
+        else:
+            return None
