@@ -12,3 +12,9 @@ class Game:
         self.board.draw(self.win)
         self.draw_valid_moves(self.valid_moves)
         pygame.display.update()
+
+  def _init(self):
+        self.selected = None
+        self.board = Board()
+        self.turn = WHITE
+        self.valid_moves = {}
