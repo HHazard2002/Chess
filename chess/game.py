@@ -40,3 +40,8 @@ class Game:
   
   def reset(self):
         self._init()
+
+  def select(self, row, col):
+        if self.selected:
+            result = self._move(row, col)
+            if not result:
