@@ -37,3 +37,6 @@ class Game:
                 return BLACK
         else:
             return None
+  
+  def reset(self):
+        self._init()
