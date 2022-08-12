@@ -47,3 +47,6 @@ class Game:
             if not result:
               self.selected = None
               self.select(row, col)
+            elif self.winner() != None:
+              print(self.winner())
+              run = False
