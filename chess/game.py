@@ -18,3 +18,12 @@ class Game:
         self.board = Board()
         self.turn = WHITE
         self.valid_moves = {}
+
+  def winner2(self):
+        value, new_board = minimax(self.get_board(), 0, self.turn, self)
+        print(value)
+        if value < -800:
+            return BLACK
+        elif value > 800:
+            return WHITE
+        return None
