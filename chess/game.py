@@ -61,4 +61,5 @@ class Game:
 
   def _move(self, row, col):
 
-        
+        eaten_piece = self.board.get_piece(row, col)
+        piece = self.selected
