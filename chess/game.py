@@ -63,3 +63,6 @@ class Game:
 
         eaten_piece = self.board.get_piece(row, col)
         piece = self.selected
+        board = self.board
+        if piece and eaten_piece != 0 and (row, col) in self.valid_moves:
+            self.eaten_pieces = eaten_piece
