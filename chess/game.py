@@ -73,3 +73,7 @@ class Game:
                 piece.type = QUEEN 
                 piece.value = 9
         elif piece and piece.type == KING:
+            if piece.color == BLACK and board.roker_black:
+                if col == 2:
+                    board.move(board.get_piece(0,0), 0, 3)
+                
