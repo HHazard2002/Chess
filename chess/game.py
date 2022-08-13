@@ -67,4 +67,7 @@ class Game:
         if piece and eaten_piece != 0 and (row, col) in self.valid_moves:
             self.eaten_pieces = eaten_piece
             board.remove(eaten_piece)
-            board.move(piece, row, col) 
+            board.move(piece, row, col)
+            self.change_turn()
+            if piece.type == PAWN and ((row == 7 and piece.color == BLACK) or (row == 0 and piece.color == WHITE)):
+                piece.type = QUEEN 
