@@ -71,3 +71,5 @@ class Game:
             self.change_turn()
             if piece.type == PAWN and ((row == 7 and piece.color == BLACK) or (row == 0 and piece.color == WHITE)):
                 piece.type = QUEEN 
+                piece.value = 9
+        elif piece and piece.type == KING:
