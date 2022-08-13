@@ -58,3 +58,7 @@ class Game:
             return True
           
         return False
+
+  def _move(self, row, col):
+
+        
