@@ -50,3 +50,9 @@ class Game:
             elif self.winner() != None:
               print(self.winner())
               run = False
+      
+        piece = self.board.get_piece(row, col)
+        if piece != 0 and piece.color == self.turn:
+            self.selected = piece
+            self.valid_moves = self.board.get_legal_moves(piece)
+            return True
