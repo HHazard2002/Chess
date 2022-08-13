@@ -66,3 +66,5 @@ class Game:
         board = self.board
         if piece and eaten_piece != 0 and (row, col) in self.valid_moves:
             self.eaten_pieces = eaten_piece
+            board.remove(eaten_piece)
+            board.move(piece, row, col) 
