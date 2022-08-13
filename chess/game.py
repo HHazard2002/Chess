@@ -56,3 +56,5 @@ class Game:
             self.selected = piece
             self.valid_moves = self.board.get_legal_moves(piece)
             return True
+          
+        return False
