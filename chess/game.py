@@ -84,4 +84,5 @@ class Game:
                 elif col == 6:
                     board.move(board.get_piece(7,7), 7, 5)
         if piece and eaten_piece == 0 and (row, col) in self.valid_moves:
+            board.move(piece, row, col)    
                 
