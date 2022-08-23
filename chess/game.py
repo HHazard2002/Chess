@@ -81,4 +81,6 @@ class Game:
             elif piece.color == WHITE and board.roker_white:
                 if col == 2:
                     board.move(board.get_piece(7,0), 7, 3)
+                elif col == 6:
+                    board.move(board.get_piece(7,7), 7, 5)
                 
