@@ -89,4 +89,4 @@ class Game:
         else:
             return False 
         if piece.type == PAWN and ((row == 7 and piece.color == BLACK) or (row == 0 and piece.color == WHITE)):
-                
+            piece.type = QUEEN
