@@ -91,3 +91,4 @@ class Game:
         if piece.type == PAWN and ((row == 7 and piece.color == BLACK) or (row == 0 and piece.color == WHITE)):
             piece.type = QUEEN
             piece.value = 9
+            
