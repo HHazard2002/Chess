@@ -93,3 +93,4 @@ class Game:
             piece.value = 9
         if piece.type == KING or piece.type == ROOK:
             if piece.color == BLACK:
+                board.roker_black = False
