@@ -94,5 +94,5 @@ class Game:
         if piece.type == KING or piece.type == ROOK:
             if piece.color == BLACK:
                 board.roker_black = False
-                            elif piece.color == WHITE:
+            elif piece.color == WHITE:
                 board.roker_white = False
