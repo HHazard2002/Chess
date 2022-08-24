@@ -92,3 +92,4 @@ class Game:
             piece.type = QUEEN
             piece.value = 9
         if piece.type == KING or piece.type == ROOK:
+            if piece.color == BLACK:
