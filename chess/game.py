@@ -103,3 +103,5 @@ class Game:
         if board.eaten_en_passant:
             board.remove(board.eaten_en_passant)
             board.eaten_en_passant = None
+
+        return True
