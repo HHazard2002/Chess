@@ -98,4 +98,6 @@ class Game:
                 board.roker_white = False
         elif piece.type == PAWN and ((piece.color == BLACK and row == 3) or (piece.color == WHITE and row == 4)) :
             board.en_passant = piece
+        else:
+            board.en_passant = None
         
