@@ -113,3 +113,5 @@ class Game:
 
   def new_piece(self, move):
     return False
+
+  def change_turn(self):
