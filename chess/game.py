@@ -115,3 +115,4 @@ class Game:
     return False
 
   def change_turn(self):
+    self.valid_moves = {}
