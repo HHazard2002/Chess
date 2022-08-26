@@ -107,3 +107,4 @@ class Game:
         return True
 
     def draw_valid_moves(self, moves):
+        for move in moves:
