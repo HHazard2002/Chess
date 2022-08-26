@@ -118,3 +118,5 @@ class Game:
     self.valid_moves = {}
     if self.turn == BLACK:
             self.turn = WHITE
+    else:
+            self.turn = BLACK
