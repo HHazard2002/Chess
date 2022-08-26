@@ -112,3 +112,4 @@ class Game:
         pygame.draw.circle(self.win, BLUE, (col * SQUARE_SIZE + SQUARE_SIZE//2, row * SQUARE_SIZE + SQUARE_SIZE//2), 15)
 
   def new_piece(self, move):
+    return False
