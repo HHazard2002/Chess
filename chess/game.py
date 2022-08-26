@@ -108,3 +108,4 @@ class Game:
 
     def draw_valid_moves(self, moves):
         for move in moves:
+            row, col = move
