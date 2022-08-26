@@ -105,3 +105,5 @@ class Game:
             board.eaten_en_passant = None
 
         return True
+
+    def draw_valid_moves(self, moves):
