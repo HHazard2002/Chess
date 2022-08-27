@@ -122,3 +122,4 @@ class Game:
         self.turn = BLACK
 
   def get_board(self):
+    return self.board
