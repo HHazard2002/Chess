@@ -120,3 +120,5 @@ class Game:
         self.turn = WHITE
     else:
         self.turn = BLACK
+
+  def get_board(self):
