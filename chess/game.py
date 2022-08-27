@@ -125,3 +125,4 @@ class Game:
     return self.board
 
   def ai_move(self, board):
+    self.board = board
