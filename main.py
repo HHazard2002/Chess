@@ -19,4 +19,7 @@ def main():
 
     if 1 == 0:
 
-            run = True
+        run = True
+        clock = pygame.time.Clock()
+        game = Game(WIN)
+
