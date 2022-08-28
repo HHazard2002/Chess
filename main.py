@@ -23,3 +23,6 @@ def main():
         clock = pygame.time.Clock()
         game = Game(WIN)
 
+        while run:
+                
+
