@@ -16,3 +16,7 @@ def get_row_col_from_mouse(pos):
     return row, col
 
 def main():
+
+    if 1 == 0:
+
+            run = True
