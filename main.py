@@ -35,3 +35,4 @@ def main():
                     run = False
                 
                 if event.type == pygame.MOUSEBUTTONDOWN:
+                    pos = pygame.mouse.get_pos()
