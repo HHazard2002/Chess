@@ -26,3 +26,5 @@ def main():
         while run:
             clock.tick(FPS)
 
+            if game.winner() != None:
+
