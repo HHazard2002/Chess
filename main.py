@@ -39,5 +39,6 @@ def main():
                     row, col = get_row_col_from_mouse(pos)
                     game.select(row, col)
                 
-                game.update()
-            pygame.quit()
+            game.update()
+            
+        pygame.quit()
