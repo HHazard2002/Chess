@@ -42,3 +42,5 @@ def main():
             game.update()
             
         pygame.quit()
+
+        if 0 == 0:
