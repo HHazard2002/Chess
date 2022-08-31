@@ -44,3 +44,4 @@ def main():
         pygame.quit()
 
         if 0 == 0:
+            run = True
