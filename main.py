@@ -40,3 +40,4 @@ def main():
                     game.select(row, col)
                 
                 game.update()
+            pygame.quit()
