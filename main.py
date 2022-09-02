@@ -52,3 +52,4 @@ def main():
                 clock.tick(FPS)
 
                 if game.turn == BLACK:
+                    start = time.time()
