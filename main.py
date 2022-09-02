@@ -56,3 +56,5 @@ def main():
 
                     value, new_board = pruning(game.get_board(), 3, BLACK, game)
                     print(value)
+
+                    game.ai_move(new_board)
