@@ -49,3 +49,4 @@ def main():
             game = Game(WIN)
 
             while run:
+                clock.tick(FPS)
