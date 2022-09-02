@@ -45,3 +45,4 @@ def main():
 
         if 0 == 0:
             run = True
+            clock = pygame.time.Clock()
