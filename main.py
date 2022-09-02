@@ -55,3 +55,4 @@ def main():
                     start = time.time()
 
                     value, new_board = pruning(game.get_board(), 3, BLACK, game)
+                    print(value)
