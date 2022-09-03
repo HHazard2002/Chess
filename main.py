@@ -59,3 +59,4 @@ def main():
 
                     game.ai_move(new_board)
                     end = time.time()
+                    print(end - start)
