@@ -64,3 +64,5 @@ def main():
                 if game.winner() != None:
                     print(game.winner())
                     run = False
+                
+                for event in pygame.event.get():
