@@ -62,3 +62,4 @@ def main():
                     print(end - start)
 
                 if game.winner() != None:
+                    print(game.winner())
